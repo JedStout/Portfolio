@@ -1,24 +1,77 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Jed Stout</title>
+<html lang="en">
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/styles/main.css" media=”screen” />
-    
-</head>
-<body class="">
-
-    <div class="">
-        <h2>Jedediah Stout</h2>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jed Stout</title>
+    <link href="/styles/main.css" type="text/css" media=”screen” rel="stylesheet">
+    <link href="https://unpkg.com/@csstools/normalize.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" crossorigin="anonymous">
+  </head>
+  <body >
+    <header>
+      <div class="logo">
+        <img src="/images/pirate.png" alt="">
       </div>
-    </div>
-    <div class="">
-      <p><i class=""></i>Software Developer</p>
-      <p><i class=""></i>Salt Lake City, UT</p>
-      <p><i class=""></i>jedstout@mail.com</p>
-      <p><i class=""></i>801-707-6676</p>
-      <hr>
-</div>
-</body>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+           <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+           <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+           <li class="nav__item"><a href="#aboutme" class="nav__link">About Me</a></li>
+           <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+    </header>
+    <section class="intro" id="home">
+      <h1 class="intro__title">
+        <strong>Jedediah Stout</strong>
+      </h1>
+      <p class="intro__subtitle">Software Developer</p>
+      <img src="/images/beard.jpg" alt="a picture of Jed stout smiling">
+    </section>
+
+    <section class="projects" id="projects">
+      <h2 class="project__title">Projects</h2>
+      <h3>This is what I am working on:</h3>
+
+      <div class="portfolio1">
+        <a href="#" class="portfolio1__item">
+          <img src="/images/bear.png">
+        </a>
+      </div>
+
+      <div class="portfolio2">
+        <a href="#" class="portfolio2__item">
+          <img src="/images/pirate.png">
+        </a>
+      </div>
+
+      <div class="portfolio3">
+        <a href="#" class="portfolio3__item">
+          <img src="/images/bear.png">
+        </a>
+      </div>
+    </section>
+
+    <section class="aboutme" id="aboutme">
+      <h2 class="aboutme__title">About Me</h2>
+      <h3>I build fun stuff</h3>
+    </section>
+
+    <section class="contact" id="contact">
+      <div >
+        <p>Jedediah Stout</p>
+        <p>Software Developer</p>
+        <p>jedstout@mail.com</p>
+        <p>801-707-6676</p>
+        <p><a href=""></a></p>
+        <hr>
+      </div>
+    </section>
+
+  </body>
 </html>

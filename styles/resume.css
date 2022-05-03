@@ -1,0 +1,11 @@
+@import url('http://fonts.cdnfonts.com/css/norse');
+@import url('http://fonts.cdnfonts.com/css/viking-normal');
+
+body {
+    color:#000;
+    background-color:#f1f1f1;
+}
+
+h2, p {
+    font-family: 'Norse', sans-serif;
+}

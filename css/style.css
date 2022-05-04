@@ -1,15 +1,46 @@
 @import url('http://fonts.cdnfonts.com/css/norse');
 @import url('http://fonts.cdnfonts.com/css/viking-normal');
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Custom Styles */
+
+:root {
+    --ff-primary:'Norse', sans-serif;
+    --ff-secondary: 'viking-normal', sans-serif;
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #16e0bd;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-boody: 1rem;
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+/* General Styles */
 
 body {
-    color:#000;
-    background:gray;
+    background: var(--clr-light);
 }
 
-h2, p {
-    font-family: 'Norse', sans-serif;
+h1, h2, h3, li, p {
+    font-family: var(--ff-primary);
 }
- p {
-    font-family: 'viking-normal', sans-serif;
- }

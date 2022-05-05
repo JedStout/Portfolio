@@ -16,9 +16,13 @@
     --fw-reg: 300;
     --fw-bold: 900;
 
-    --clr-light: #fff;
-    --clr-dark: #303030;
-    --clr-accent: #16e0bd;
+    --clr-light: #FBEEC1;
+    --clr-brown: #BC986A;
+    --clr-blue: #659DBD;
+    --clr-blue-drk: #326698;
+    --clr-accent-brown: #DAAD86;
+    --clr-accent-green: #8D8741;
+    --clr-neutral: #efefef;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -37,8 +41,17 @@
 
 /* General Styles */
 
+header {
+    background: var(--clr-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    padding-right: 0px;
+}
+
 body {
-    background: var(--clr-light);
+    background: linear-gradient(var(--clr-accent-bright), var(--clr-blue));
     display: block;
     margin: 0;
     font-family: var(--ff-primary);
@@ -58,7 +71,10 @@ body {
 
 img {
     display: block;
-    max-width: 100%;
+    max-width: 250px;
+}
+hr {
+    max-width: 90%;
 }
 
 h1,
@@ -71,17 +87,6 @@ h3 {
 h1 { font-size: var(--fs-h1);}
 h2 { font-size: var(--fs-h2);}
 h3 { font-size: var(--fs-h3);}
-
-header {
-    background: var(--clr-dark);
-    display: inline-flex;
-    max-width: none;
-    box-sizing: border-box;
-}
-
-header, img {
-    max-width: 200px;
-}
 
 .intro {
     background: var(--clr-light);
@@ -113,6 +118,7 @@ header, img {
 }
 
 footer {
+    background: var(--clr-accent-green);
     text-align: center;
     margin: 0;
 }

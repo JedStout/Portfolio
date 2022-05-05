@@ -102,6 +102,16 @@ header, img {
     margin: 0;
 }
 
+.contact {
+    display: inline-flex;
+}
+
+.contact, ul {
+    padding-left: 0;
+    margin: 0;
+    list-style-type:none;
+}
+
 footer {
     text-align: center;
     margin: 0;

@@ -28,7 +28,7 @@
 
 @media (min-width: 800px) {
     :root {
-        --fs-h1: 4.5;
+        --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;
         --fs-body: 1.125rem;
@@ -39,8 +39,70 @@
 
 body {
     background: var(--clr-light);
+    display: block;
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    width: 100%;
+    text-align: center;
+    margin: 0;
 }
 
-h1, h2, h3, li, p {
-    font-family: var(--ff-primary);
+.main {
+    color: #2f3337;
+    margin: 0 auto 24px;
+    padding: 16px 24px 0;
+    max-width: 1440px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.1;
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-h1);}
+h2 { font-size: var(--fs-h2);}
+h3 { font-size: var(--fs-h3);}
+
+header {
+    background: var(--clr-dark);
+    display: inline-flex;
+    max-width: none;
+    box-sizing: border-box;
+}
+
+header, img {
+    max-width: 200px;
+}
+
+.intro {
+    background: var(--clr-light);
+}
+
+.intro__subtitle {
+    margin: 0;
+}
+
+.projects {
+    text-align: center;
+    margin: 0;
+}
+
+.projects__sub {
+    display: inline-flex;
+    text-align: center;
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    margin: 0;
 }

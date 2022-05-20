@@ -53,6 +53,10 @@ margin: 0 auto;
   
 }
 
+.title-logo {
+height: 35px;
+}
+
 .home-base.mdl-layout .mdl-layout__content {
 padding-top: 90px;
 position: relative;
@@ -497,7 +501,6 @@ background: transparent;
   max-width: 550px;
   margin: auto;
 }
-
 
 .home-base .mdl-mini-footer {
 margin-top: 80px;

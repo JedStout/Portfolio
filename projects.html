@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-orange.min.css">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="components/header.js" type="text/javascript" defer></script>
+    <script src="components/footer.js" type="text/javascript" defer></script>
     <style>
     #view-source {
       position: fixed;
@@ -31,19 +33,7 @@
   </head>
   <body>
     <div class="home-base home-base--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">
-      <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-          <a class="mdl-navigation__link" href="index.html"><img class="title-logo" src="images/logo.png"></a>
-          <span class="mdl-layout-title"><a class="mdl-navigation__link" href="index.html"><h4>Jedediah Stout</h4></a></span>
-          <nav class="mdl-navigation mdl-layout--large-screen-only">
-            <a class="mdl-navigation__link" href="projects.html">Projects</a>
-            <a class="mdl-navigation__link" href="games.html">Games</a>            
-            <a class="mdl-navigation__link" href="todo.html">Todo</a>
-            <a class="mdl-navigation__link" href="resume.html">Resume</a>
-            <a class="mdl-navigation__link" href="connect.html">Connect</a>
-          </nav>
-        </div>
-      </header>
+      <header-component></header-component>
       <main class="mdl-layout__content">
         <div class="home-base__posts mdl-grid">
           <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--6-col">
@@ -57,18 +47,7 @@
             </div>
           </div>
         </div>
-        <footer class="mdl-mini-footer">
-          <div class="mdl-mini-footer--left-section">
-            <button class="mdl-mini-footer--social-btn social-btn">
-              <a class="mdl-navigation__link" href="https://github.com/JedStout"><img class="title-logo" src="images/GitHub-24px.png"></a>
-            </button>
-            <button class="mdl-mini-footer--social-btn social-btn">
-              <a class="mdl-navigation__link" href="https://www.linkedin.com/in/jedstout/"><img class="title-logo" src="images/LinkIn-24.png"></a>
-            </button>
-          </div>
-          <div class="mdl-mini-footer--right-section">
-          </div>
-        </footer>
+        <footer-component></footer-component>
       </main>
       <div class="mdl-layout__obfuscator"></div>
     </div>

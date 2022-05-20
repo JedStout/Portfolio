@@ -53,10 +53,6 @@ margin: 0 auto;
   
 }
 
-.title-logo {
-height: 35px;
-}
-
 .home-base.mdl-layout .mdl-layout__content {
 padding-top: 90px;
 position: relative;
@@ -489,13 +485,3 @@ border-radius: 2px;
   margin: auto;
 }
 
-.home-base .mdl-mini-footer {
-margin-top: 80px;
-height: 100px;
-padding: 40px;
--webkit-align-items: center;
-    -ms-flex-align: center;
-        align-items: center;
-box-sizing: border-box;
-background-color: #9E9E9E;
-}

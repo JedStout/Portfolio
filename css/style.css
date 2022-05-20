@@ -492,12 +492,13 @@ background-image: url('https://www.gstatic.com/images/icons/material/system/2x/p
 color: rgba(0, 0, 0, 0.54);
 background: transparent;
 }
-
-.portfolio-contact .mdl-textfield {
-  width: 100%;
+.portfolio-connect {
+  background-color: #bea587;
 }
+.portfolio-connect .mdl-textfield {
+  width: 100%;}
 
-.portfolio-contact form {
+.portfolio-connect form {
   max-width: 550px;
   margin: auto;
 }

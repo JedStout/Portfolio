@@ -457,7 +457,6 @@ border-radius: 22px;
 background-color: #F5F5F5;
 }
 
-/* Fixes for IE 10 */
 .mdl-grid {
 display: -webkit-flex !important;
 display: -ms-flexbox !important;
@@ -489,6 +488,16 @@ background-image: url('https://www.gstatic.com/images/icons/material/system/2x/p
 color: rgba(0, 0, 0, 0.54);
 background: transparent;
 }
+
+.portfolio-contact .mdl-textfield {
+  width: 100%;
+}
+
+.portfolio-contact form {
+  max-width: 550px;
+  margin: auto;
+}
+
 
 .home-base .mdl-mini-footer {
 margin-top: 80px;

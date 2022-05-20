@@ -15,7 +15,7 @@ body::before {
      (max-width: 1024px) and (-webkit-max-device-pixel-ratio: 1.5),
      (max-width: 1024px) and (max-resolution: 1.5dppx) {
 body::before {
-  background-image: url('images/wg_1024.jpg');
+  background-image: url('../images/wg_1024.jpg');
 }
 }
 @media (min-width: 513px)  and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5),
@@ -23,7 +23,7 @@ body::before {
      (min-width: 1025px) and (max-width: 2048px) and (-webkit-max-device-pixel-ratio: 1.5),
      (min-width: 1025px) and (max-width: 2048px) and (max-resolution: 1.5dppx)  {
 body::before {
-  background-image: url('images/wg_2048.jpg');
+  background-image: url('../images/wg_2048.jpg');
 }
 }
 @media (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 1.5),
@@ -31,7 +31,7 @@ body::before {
      (min-width: 2049px) and (-webkit-max-device-pixel-ratio: 1.5),
      (min-width: 2049px) and (max-resolution: 1.5dppx) {
 body::before {
-  background-image: url('images/bg_2880.jpg');
+  background-image: url('../images/bg_2880.jpg');
 }
 }
 body .home-base {
@@ -183,7 +183,7 @@ display: flex;
         order: -1;
 }
 .home-base .tahoe-pic .mdl-card__media {
-background-image: url('images/tahoe.jpg');
+background-image: url('../images/tahoe.jpg');
 }
 .home-base .something-else .mdl-card__media {
 display: -webkit-flex;
@@ -223,10 +223,10 @@ border-bottom-left-radius: 2px;
 border-bottom-right-radius: 2px;
 }
 .home-base .pine-trees .mdl-card__media {
-background-image: url('images/pine_trees.jpg');
+background-image: url('../images/pine_trees.jpg');
 }
 .home-base .shopping .mdl-card__media {
-background-image: url('images/shopping.jpg');
+background-image: url('../images/shopping.jpg');
 }
 .home-base .home-base__posts > .home-base-nav {
 margin: 12px 15px;
@@ -285,7 +285,7 @@ content: '”';
 background-color: transparent;
 }
 .home-base--blogpost .home-base__posts > .mdl-card .mdl-card__media {
-background-image: url('images/pine_trees_big.jpg');
+background-image: url('../images/pine_trees_big.jpg');
 height: 280px;
 }
 .home-base--blogpost .comments {
@@ -449,7 +449,7 @@ background-color: #263238;
 .home-base .minilogo {
 width: 44px;
 height: 44px;
-background-image: url('images/avatar.png');
+background-image: url('../images/avatar.png');
 background-position: center;
 background-repeat: no-repeat;
 background-size: 50%;

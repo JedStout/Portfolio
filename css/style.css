@@ -229,9 +229,7 @@ border-bottom-right-radius: 2px;
 .home-base .pine-trees .mdl-card__media {
 background-image: url('../images/pine_trees.jpg');
 }
-.home-base .shopping .mdl-card__media {
-background-image: url('../images/shopping.jpg');
-}
+
 .home-base .home-base__posts > .home-base-nav {
 margin: 12px 15px;
 display: -webkit-flex;
@@ -479,19 +477,7 @@ cursor: pointer;
 opacity: 0.46;
 border-radius: 2px;
 }
-.social-btn__twitter {
-background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_twitter_black_24dp.png');
-}
-.social-btn__blogger {
-background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_facebook_black_24dp.png');
-}
-.social-btn__gplus {
-background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_gplus_black_24dp.png');
-}
-.social-btn__share {
-color: rgba(0, 0, 0, 0.54);
-background: transparent;
-}
+
 .portfolio-connect {
   background-color: #bea587;
 }

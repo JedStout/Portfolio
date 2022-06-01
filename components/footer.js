@@ -29,7 +29,7 @@ footerTemplate.innerHTML = `
         </div>
         <div class="mdl-mini-footer--right-section">
           <a class="mdl-navigation__link" >
-            <p>Copyright &copy; Jedediah Stout</p>
+            <p>Copyright &copy; ${currentYr} Jedediah Stout</p>
           </a>
         </div>
     </footer>

@@ -1,4 +1,5 @@
 const footerTemplate = document.createElement('template');
+const currentYr = new Date().getFullYear();
 
 footerTemplate.innerHTML = `
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
@@ -27,6 +28,9 @@ footerTemplate.innerHTML = `
             </button>
         </div>
         <div class="mdl-mini-footer--right-section">
+          <a class="mdl-navigation__link" >
+            <p>Copyright &copy; Jedediah Stout</p>
+          </a>
         </div>
     </footer>
 `;

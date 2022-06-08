@@ -34,6 +34,7 @@ body::before {
   background-image: url('../images/bg_2880.jpg');
 }
 }
+
 body .home-base {
 font-family: 'Roboto', 'Helvetica', sans-serif;
 min-height: 100%;
@@ -57,6 +58,7 @@ padding-top: 90px;
 position: relative;
 -webkit-overflow-scrolling: touch;
 }
+
 .home-base .mdl-card {
 display: -webkit-flex;
 display: -ms-flexbox;
@@ -150,6 +152,7 @@ display: flex;
         justify-content: flex-start;
 height: auto;
 }
+
 .home-base .meta > .meta__favorites{
 -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -158,11 +161,13 @@ margin: 0 8px;
 font-size: 13px;
 font-weight: 500;
 }
+
 .home-base .meta > .meta__favorites .material-icons {
 font-size: 2em;
 cursor: pointer;
 margin-left: 12px;
 }
+
 .home-base .mdl-card .meta.meta--fill {
 -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -179,6 +184,7 @@ display: flex;
     -ms-flex-direction: column;
         flex-direction: column;
 }
+
 .home-base.is-small-screen .home-base__posts > .mdl-card.tahoe-pic {
 -webkit-order: 0;
     -ms-flex-order: 0;
@@ -189,6 +195,7 @@ display: flex;
     -ms-flex-order: -1;
         order: -1;
 }
+
 .home-base .tahoe-pic .mdl-card__media {
 background-image: url('../images/tahoe.jpg');
 }
@@ -462,9 +469,11 @@ border-radius: 22px;
 background-color: #F5F5F5;
 }
 
-.games_title, .projects_title {
+.subpage_titles, h1, h2 {
 margin: 0 auto;
 text-align: center;
+font-family: 'cocolatte', 'autolova', 'Aloevera', 'Roboto', sans-serif !important;
+color: beige;
 }
 
 .mdl-grid {

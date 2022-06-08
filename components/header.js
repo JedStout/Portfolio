@@ -9,17 +9,20 @@ headerTemplate.innerHTML = `
         height: 35px;
     }
 
+    .header_links {
+      color: beige !important;
+    }
   </style>
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
                 <a class="mdl-navigation__link" href="index.html"><img class="title-logo" src="images/logo.png"></a>
                 <span class="mdl-layout-title"><a class="mdl-navigation__link" href="index.html"><h4>Jedediah Stout</h4></a></span>
             <nav class="mdl-navigation mdl-layout--large-screen-only">
-                <a class="mdl-navigation__link" href="projects.html">Projects</a>
-                <a class="mdl-navigation__link" href="games.html">Games</a>            
-                <a class="mdl-navigation__link" href="todo.html">Todo</a>
-                <a class="mdl-navigation__link" href="resume.html">Resume</a>
-                <a class="mdl-navigation__link" href="connect.html">Connect</a>
+                <a class="mdl-navigation__link header_links" href="projects.html">Projects</a>
+                <a class="mdl-navigation__link header_links" href="games.html">Games</a>            
+                <a class="mdl-navigation__link header_links" href="todo.html">Todo</a>
+                <a class="mdl-navigation__link header_links" href="resume.html">Resume</a>
+                <a class="mdl-navigation__link header_links" href="connect.html">Connect</a>
             </nav>
         </div>
     </header>

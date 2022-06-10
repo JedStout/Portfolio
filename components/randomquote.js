@@ -1,32 +1,16 @@
-const randomquoteTemplate = document.createElement('template');
+window.addEventListener('load', function () {
+    getQuote()
+  })
 
-randomquoteTemplate.innerHTML = `
-    <style>
-        .randomquote {
-            color: black;
-        }
+const quote_url = 'https://favqs.com/api/qotd';
+const getQuote = async () => {
+    const response = await fetch(quote_url);
+    const data = await response.json();
+    console.log(data);
+    return data;
+  };
 
-    </style>
-    <div class="mdl-mini-footer--left-section">
-        <p>Testing testing 123</p>
-    </div>
-`;
-
-class RandomQuote extends HTMLElement {
-  constructor() {
-    super();
-  }
-
-  connectedCallback() {
-    const fontAwesome = document.querySelector('link[href*="font-awesome"]');
-    const shadowRoot = this.attachShadow({ mode: 'closed' });
-
-    if (fontAwesome) {
-      shadowRoot.appendChild(fontAwesome.cloneNode());
-    }
-
-    shadowRoot.appendChild(randomquoteTemplate.content);
-  }
-}
-
-customElements.define('randomquote-component', RandomQuote);
+const quote = [{
+    author: "Jed Stout",
+    words: "This is a test!"
+}]

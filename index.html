@@ -51,7 +51,8 @@
           <div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop">
             <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
               <img src="images/logo.png">
-              <p>${quote.author}</p>
+              <p><span id="quoteBody"></span></p>
+              <p>--<span id="quoteAuth"></span></p>
             </div>
             <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
                 <p>Quote of the Day</p>
@@ -86,5 +87,16 @@
       <div class="mdl-layout__obfuscator"></div>
     </div>
   </body>
-  <script src="components/randomquote.js"></script>
+  <script>
+    const quote_url = 'https://favqs.com/api/qotd';
+    async function getQuote (){
+        const response = await fetch(quote_url);
+        const data = await response.json();
+        document.getElementById('quoteBody').textContent = data.quote.body;
+        document.getElementById('quoteAuth').textContent = data.quote.author;
+        return data;
+      };
+
+    getQuote();
+  </script>
 </html>

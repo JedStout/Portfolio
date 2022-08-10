@@ -53,10 +53,19 @@ margin: 0 auto;
         flex-shrink: 0;
 }
 
-.home-base.mdl-layout .mdl-layout__content {
+.home-base .mdl-layout .mdl-layout__content {
 padding-top: 90px;
 position: relative;
 -webkit-overflow-scrolling: touch;
+min-height: 80vh;
+display: flex;
+flex-direction: column
+}
+
+.mdl-layout .mdl-layout__content {
+min-height: 80vh;
+display: flex;
+flex-direction: column;
 }
 
 .home-base .mdl-card {

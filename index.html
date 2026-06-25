@@ -1,102 +1,604 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="mobile-web-app-capable" content="yes">    
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-    <title>Jedediah Stout</title>
-    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
-    <link rel="shortcut icon" href="images/favicon.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-orange.min.css">
-    <link href="http://fonts.cdnfonts.com/css/aloevera" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="components/header.js" type="text/javascript" defer></script>
-    <script src="components/footer.js" type="text/javascript" defer></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jed Stout - Technical Project Manager & Entrepreneur</title>
     <style>
-    #view-source {
-      position: fixed;
-      display: block;
-      right: 0;
-      bottom: 0;
-      margin-right: 40px;
-      margin-bottom: 40px;
-      z-index: 900;
-    }
-    </style>
-  </head>
-  <body>
-    <div class="home-base mdl-layout mdl-js-layout has-drawer is-upgraded">
-      <header-component></header-component>
-      <main class="mdl-layout__content">
-        <div class="home-base__posts mdl-grid">
-          <div class="mdl-cell--12-col subpage_titles"><h1>Jedediah Stout</h1></div>
-        </div>
-        <div class="home-base__posts mdl-grid">
-          <div class="mdl-card tahoe-pic mdl-cell mdl-cell--8-col">
-            <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3>Tahoe Pic</h3>
-            </div>
-            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-              <div class="minilogo"></div>
-            </div>
-          </div>
-          <div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop">
-            <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
-              <img src="images/logo.png">
-              <p><span id="quoteBody"></span></p>
-              <p>--<span id="quoteAuth"></span></p>
-            </div>
-            <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
-                <p>Quote of the Day</p>
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="quote button" onclick="getQuote()">New Quote</button>
-            </div>
-          </div>
-          <div class="mdl-card pine-trees mdl-cell mdl-cell--12-col">
-            <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3><a href="projects.html">On the road again</a></h3>
-            </div>
-            <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
-              Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-            </div>
-            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-              <div class="minilogo"></div>
-            </div>
-          </div>
-          <div class="mdl-card amazing mdl-cell mdl-cell--12-col">
-            <div class="mdl-card__title mdl-color-text--grey-50">
-              <h3 class="quote"><a href="projects.html">I couldn’t take any pictures but this was an amazing thing…</a></h3>
-            </div>
-            <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-              Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-            </div>
-            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-              <div class="minilogo"></div>
-            </div>
-          </div>
-        </div>
-        <footer-component style="margin-top: auto;"></footer-component>
-      </main>
-      <div class="mdl-layout__obfuscator"></div>
-    </div>
-  </body>
-  <script>
-    const quote_url = 'https://favqs.com/api/qotd';
-    async function getQuote (){
-        const response = await fetch(quote_url);
-        const data = await response.json();
-        document.getElementById('quoteBody').textContent = data.quote.body;
-        document.getElementById('quoteAuth').textContent = data.quote.author;
-        return data;
-      };
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    getQuote();
-  </script>
+        :root {
+            --primary-blue: #5B9BD5;
+            --sky-blue: #87CEEB;
+            --light-gray: #F5F5F5;
+            --medium-gray: #E8E8E8;
+            --dark-gray: #333333;
+            --text-primary: #2C3E50;
+            --text-secondary: #7F8C8D;
+            --woodgrain: linear-gradient(90deg, #8B6F47 0%, #A0826D 50%, #8B6F47 100%);
+            --accent-green: #52B788;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: #FFFFFF;
+        }
+
+        header {
+            background: linear-gradient(135deg, #FFFFFF 0%, var(--light-gray) 100%);
+            border-bottom: 4px solid var(--primary-blue);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .hero-content h1 .highlight {
+            color: var(--primary-blue);
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #4A7FB5;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(91, 155, 213, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-blue);
+            border-color: var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+
+        .hero-image {
+            display: none;
+        }
+
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--text-primary);
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary-blue);
+            border-radius: 2px;
+        }
+
+        .section-alternate {
+            background-color: var(--light-gray);
+        }
+
+        .featured-projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 5px solid var(--primary-blue);
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .project-card-header {
+            background: var(--primary-blue);
+            color: white;
+            padding: 1.5rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .project-card-body {
+            padding: 1.5rem;
+        }
+
+        .project-card-body p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: var(--medium-gray);
+            color: var(--text-primary);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .tag.tech {
+            background-color: #E3F2FD;
+            color: var(--primary-blue);
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-content h3 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .about-content p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .about-highlight {
+            background: var(--primary-blue);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .about-highlight h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-top: 4px solid var(--primary-blue);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .skill-category h4 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 0.4rem 0;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .skill-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-weight: bold;
+        }
+
+        .woodgrain-divider {
+            height: 8px;
+            background: var(--woodgrain);
+            margin: 3rem 0;
+            border-radius: 4px;
+        }
+
+        .contact-section {
+            text-align: center;
+            padding: 3rem;
+            background: var(--primary-blue);
+            color: white;
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        .contact-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-section p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            background-color: rgba(255,255,255,0.2);
+            transition: background-color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .contact-links a:hover {
+            background-color: rgba(255,255,255,0.4);
+        }
+
+        footer {
+            background-color: var(--text-primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .featured-projects {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">JED STOUT</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1><span class="highlight">Innovating</span> Tools for Tomorrow</h1>
+            <p>Technical Project Manager & Entrepreneur. 8+ years leading cross-functional teams in complex software and hardware ventures. Currently scaling Placer Point Dynamics — advancing water purification and environmental solutions through innovative nanoparticle technology and development.</p>
+            <div class="hero-cta">
+                <a href="https://placerpointdynamics.com" class="btn btn-primary">Placer Point Dynamics</a>
+                <a href="https://buddabellybookkeeping.com" class="btn btn-secondary">Buddy Belly Bookkeeping</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="woodgrain-divider"></div>
+
+    <section id="about" class="about section-alternate">
+        <div>
+            <h2 class="section-title" style="text-align: left;">About</h2>
+            <div class="about-content">
+                <p>I'm a results-driven Technical Project Manager with a proven track record managing large-scale application migrations, coordinating complex stakeholders, and delivering enterprise-grade technical initiatives on time and on budget.</p>
+                
+                <h3>Technical Leadership</h3>
+                <p>With 8+ years in government and enterprise environments, I've led cross-functional teams through critical transitions — including the largest modernization initiative in Utah's legislative history, managing 200+ legacy application migrations while maintaining zero project delays.</p>
+
+                <h3>Current Focus</h3>
+                <p>As founder of <strong>Placer Point Dynamics</strong>, I'm building innovative solutions for water purification and environmental challenges through advanced nanoparticle technology and materials development. We're creating the materials of the future — with applications that tackle global environmental needs while positioning for strategic government and enterprise partnerships.</p>
+
+                <h3>Supporting Innovation</h3>
+                <p>Through <strong>Buddy Belly Bookkeeping</strong>, I've built an AI-powered bookkeeping and CFO services platform that delivers real-time financial data, intelligent insights, and comprehensive dashboards to growing businesses. By combining accounting expertise with cutting-edge AI, we're transforming how companies access and act on financial intelligence.</p>
+
+                <!-- Simple Maid - Coming Soon
+                <h3>Simplifying Technology</h3>
+                <p><strong>Simple Maid</strong> is our latest venture — a silent, automatic security and cleanup app that runs in the background, protecting computers without interruption. No pop-ups, no notifications, just automatic virus scanning and system optimization when your computer is idle. Security and simplicity working together.</p>
+                -->
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="featured-projects">
+            <!-- Simple Maid - Coming Soon
+            <div class="project-card">
+                <div class="project-card-header">
+                    🛡️ Simple Maid
+                </div>
+                <div class="project-card-body">
+                    <p>Silent, automatic security and system cleanup app that runs in the background. Virus scanning, malware protection, and intelligent computer cleanup — all without pop-ups or notifications. Just works.</p>
+                    <p><strong>Role:</strong> Founder & Developer — Full app architecture, security integration, and user experience design. Launching 2026.</p>
+                    <div class="project-tags">
+                        <span class="tag tech">Security</span>
+                        <span class="tag tech">Automation</span>
+                        <span class="tag tech">Consumer App</span>
+                        <span class="tag tech">$100/year</span>
+                    </div>
+                    <a href="#contact" class="btn btn-primary" style="display: inline-block; margin-top: 1rem;">Coming Soon</a>
+                </div>
+            </div>
+            -->
+
+            <div class="project-card">
+                <div class="project-card-header">
+                    ⚛️ Placer Point Dynamics
+                </div>
+                <div class="project-card-body">
+                    <p>Advanced materials innovation focused on water purification and environmental solutions through cutting-edge nanoparticle technology and development. Creating the materials of the future.</p>
+                    <p><strong>Role:</strong> Founder & Operator — Product development, go-to-market strategy, technology research, and strategic partnerships.</p>
+                    <div class="project-tags">
+                        <span class="tag tech">Nanotech</span>
+                        <span class="tag tech">Water Purification</span>
+                        <span class="tag tech">Materials Science</span>
+                        <span class="tag tech">Innovation</span>
+                    </div>
+                    <a href="https://placerpointdynamics.com" class="btn btn-primary" style="display: inline-block; margin-top: 1rem;">Visit Site</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-card-header">
+                    📊 Buddy Belly Bookkeeping
+                </div>
+                <div class="project-card-body">
+                    <p>AI-powered bookkeeping and CFO services platform delivering real-time financial data, intelligent insights, and comprehensive dashboards. Built to provide modern businesses with the financial intelligence they need to scale.</p>
+                    <p><strong>Role:</strong> Founder & Developer — Full platform design, AI integration, customer implementation, and ongoing innovation.</p>
+                    <div class="project-tags">
+                        <span class="tag tech">AI-Powered</span>
+                        <span class="tag tech">Real-Time Data</span>
+                        <span class="tag tech">CFO Services</span>
+                        <span class="tag tech">Financial Dashboards</span>
+                    </div>
+                    <a href="https://buddabellybookkeeping.com" class="btn btn-primary" style="display: inline-block; margin-top: 1rem;">Visit Site</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-card-header">
+                    🏛️ GSA Content Management
+                </div>
+                <div class="project-card-body">
+                    <p>Contract Content Management Specialist at Schatz Publishing Group (GSA.gov). Managed large-scale content operations across a federal web platform, coordinating with design, engineering, and compliance teams across multiple ventures and distinct projects.</p>
+                    <p><strong>Role:</strong> Oversaw end-to-end content lifecycle across two CMS platforms, enforced AP style and Section 508 accessibility standards, leveraged AI tooling to streamline workflows across thousands of pages.</p>
+                    <p><strong>Timeline:</strong> Jun 2024 – Jan 2026</p>
+                    <div class="project-tags">
+                        <span class="tag tech">Content Management</span>
+                        <span class="tag tech">Multi-Platform</span>
+                        <span class="tag tech">Federal Compliance</span>
+                        <span class="tag tech">Accessibility (508)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-card-header">
+                    🗂️ Utah Legislature Modernization
+                </div>
+                <div class="project-card-body">
+                    <p>Led the largest modernization initiative in Utah's legislative history — migrating 200+ legacy applications with zero project delays while coordinating elected officials and technical teams.</p>
+                    <p><strong>Role:</strong> Volunteer Manager & Project Manager — Team leadership, stakeholder coordination, sprint planning.</p>
+                    <div class="project-tags">
+                        <span class="tag tech">Project Management</span>
+                        <span class="tag tech">Team Leadership</span>
+                        <span class="tag tech">Application Migration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="woodgrain-divider"></div>
+
+    <section id="skills" class="section-alternate">
+        <h2 class="section-title">Expertise</h2>
+        <div class="skills">
+            <div class="skill-category">
+                <h4>Project Management</h4>
+                <ul class="skill-list">
+                    <li>Agile / Scrum</li>
+                    <li>Stakeholder Communication</li>
+                    <li>Risk Management</li>
+                    <li>SDLC & Software Delivery</li>
+                    <li>Budget & Resource Planning</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h4>Technical Leadership</h4>
+                <ul class="skill-list">
+                    <li>Cross-functional Team Leadership</li>
+                    <li>Technical Requirements Gathering</li>
+                    <li>Software Architecture</li>
+                    <li>Vendor & Contractor Management</li>
+                    <li>Federal Compliance & Audits</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h4>Development</h4>
+                <ul class="skill-list">
+                    <li>Full Stack Web Development</li>
+                    <li>JavaScript / React</li>
+                    <li>HTML5 / CSS3 / Sass</li>
+                    <li>Git & CI/CD Pipelines</li>
+                    <li>MySQL & Data Management</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h4>Entrepreneurship</h4>
+                <ul class="skill-list">
+                    <li>Product Development</li>
+                    <li>Go-to-Market Strategy</li>
+                    <li>Financial Management</li>
+                    <li>Partnership Development</li>
+                    <li>Operations & Scaling</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-section">
+            <h3>Let's Connect</h3>
+            <p>Whether you're interested in Placer Point Dynamics, need CFO/accounting services, or want to discuss technical project management — I'd love to hear from you.</p>
+            <div class="contact-links">
+                <a href="mailto:jedstout@gmail.com">Email</a>
+                <a href="https://linkedin.com/in/jedstout" target="_blank">LinkedIn</a>
+                <a href="https://github.com/JedStout" target="_blank">GitHub</a>
+                <a href="https://placerpointdynamics.com" target="_blank">Placer Point Dynamics</a>
+                <a href="https://buddabellybookkeeping.com" target="_blank">Buddy Belly Bookkeeping</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Jed Stout. All rights reserved. Designed for innovation.</p>
+    </footer>
+</body>
 </html>

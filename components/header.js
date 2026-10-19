@@ -3,8 +3,6 @@ const NAV_LINKS = [
   { href: 'index.html#about', label: 'About' },
   { href: 'projects.html', label: 'Projects' },
   { href: 'resume.html', label: 'Resume' },
-  { href: 'games.html', label: 'Games' },
-  { href: 'todo.html', label: 'Todo' },
   { href: 'connect.html', label: 'Connect' },
 ];
 
